@@ -1,0 +1,15 @@
+#content {
+	max-width: 100%;
+}
+
+#picachu {
+	background: #eaeff7;
+	width: 50%;
+	float: left;
+}
+
+#index {
+	background: #ddd4a8;
+	width: 50%;
+	float: right;
+}
