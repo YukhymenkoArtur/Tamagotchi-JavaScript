@@ -7,24 +7,24 @@ var tamagotchi = Object({
   	shower : 100,
 	isDead: function () {
 			this.hearth--;
-		}
+	},
 	isHungry: function () {
-			this.food--;		
-	}
+			this.food--;
+	},
 	isWantSleep: function () {
-			this.power--;		
-	}
+			this.power--;
+	},
 	isNotPlay: function () {
-			this.happy--;		
-	}
+			this.happy--;
+	},
 	isNeedShower: function () {
-			this.shower--;		
+			this.shower--;
 	}
 
 });
 // рівень життя з таймером
 var tamaTimer = setTimeout(function tamaTimer(){
-	document.getElementById('heartl_level').innerHTML = tamagotchi.hearth;
+	document.getElementById('hearlthLevel').innerHTML = tamagotchi.hearth;
     if (tamagotchi.hearth) {
     	tamagotchi.isDead();
     	setTimeout(tamaTimer, 100);}
@@ -33,13 +33,13 @@ var tamaTimer = setTimeout(function tamaTimer(){
 
 document.getElementById('food').addEventListener('click', function () {
 	tamagotchi.hearth = 100;
-}); 
+});
 
 
 
 // рівень голоду з таймером
 var tamaTimer = setTimeout(function tamaTimer(){
-	document.getElementById('food_level').innerHTML = tamagotchi.food;
+	document.getElementById('foodLevel').innerHTML = tamagotchi.food;
     if (tamagotchi.food) {
     	tamagotchi.isHungry();
     	setTimeout(tamaTimer, 100);}
@@ -48,12 +48,12 @@ var tamaTimer = setTimeout(function tamaTimer(){
 
 document.getElementById('food').addEventListener('click', function () {
 	tamagotchi.food = 100;
-}); 
+});
 
 
 // рівень сили / сна
 var tamaTimer = setTimeout(function tamaTimer(){
-	document.getElementById('power_level').innerHTML = tamagotchi.power;
+	document.getElementById('powerLevel').innerHTML = tamagotchi.power;
     if (tamagotchi.power) {
     	tamagotchi.isWantSleep();
     	setTimeout(tamaTimer, 100);}
@@ -68,7 +68,7 @@ document.getElementById('power').addEventListener('click', function () {
 
 // рівень щастя
 var tamaTimer = setTimeout(function tamaTimer(){
-	document.getElementById('happy_level').innerHTML = tamagotchi.happy;
+	document.getElementById('happyLevel').innerHTML = tamagotchi.happy;
     if (tamagotchi.happy) {
     	tamagotchi.isNotPlay();
     	setTimeout(tamaTimer, 100);}
@@ -82,7 +82,7 @@ document.getElementById('happy').addEventListener('click', function () {
 
 // рівень необхідності прийняти душ
 var tamaTimer = setTimeout(function tamaTimer(){
-	document.getElementById('shower_level').innerHTML = tamagotchi.shower;
+	document.getElementById('showerLevel').innerHTML = tamagotchi.shower;
     if (tamagotchi.shower) {
     	tamagotchi.isNeedShower();
     	setTimeout(tamaTimer, 100);}
@@ -134,7 +134,7 @@ function toilet () {
 	if (this.toilet < 25) {
 		this.toilet++;
 	};
-}
+};
 
 
 
